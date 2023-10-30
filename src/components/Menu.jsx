@@ -1,46 +1,51 @@
 import PropTypes from "prop-types";
-
+import pizzaFocacia from "../assets/images/focaccia.jpg";
+import pizzaMargherita from "../assets/images/margherita.jpg";
+import pizzaSpinaci from "../assets/images/spinaci.jpg";
+import pizzaFunghi from "../assets/images/funghi.jpg";
+import pizzaSalamino from "../assets/images/salamino.jpg";
+import pizzaProsciutto from "../assets/images/prosciutto.jpg";
 const pizzaData = [
   {
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
     price: 6,
-    photoName: "../assets/images/focaccia.jpg",
+    photoName: pizzaFocacia,
     soldOut: false,
   },
   {
     name: "Pizza Margherita",
     ingredients: "Tomato and mozarella",
     price: 10,
-    photoName: "../assets/images/margherita.jpg",
+    photoName: pizzaMargherita,
     soldOut: false,
   },
   {
     name: "Pizza Spinaci",
     ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
     price: 12,
-    photoName: "../assets/images/spinaci.jpg",
+    photoName: pizzaSpinaci,
     soldOut: false,
   },
   {
     name: "Pizza Funghi",
     ingredients: "Tomato, mozarella, mushrooms, and onion",
     price: 12,
-    photoName: "../assets/images/funghi.jpg",
+    photoName: pizzaFunghi,
     soldOut: false,
   },
   {
     name: "Pizza Salamino",
     ingredients: "Tomato, mozarella, and pepperoni",
     price: 15,
-    photoName: "../assets/images/salamino.jpg",
+    photoName: pizzaSalamino,
     soldOut: true,
   },
   {
     name: "Pizza Prosciutto",
     ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
     price: 18,
-    photoName: "../assets/images/prosciutto.jpg",
+    photoName: pizzaProsciutto,
     soldOut: false,
   },
 ];
@@ -72,6 +77,7 @@ const Menu = () => {
 };
 
 function Pizza({ pizzaObj }) {
+  console.log(pizzaObj.photoName);
   return (
     <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
       <img src={pizzaObj.photoName} alt={pizzaObj.name} />
