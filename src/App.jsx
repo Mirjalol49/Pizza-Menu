@@ -1,8 +1,8 @@
 import "./index.css";
-import Header from "./components/header";
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 
-import Menu from "./components/menu";
-import Footer from "./components/footer";
 function App() {
   return (
     <div className="container">
